@@ -9,7 +9,7 @@ void area(int side) {
 
 
 void area(int length, int width) {
-    int rectangleArea = length * width;
+    int rectangleArea = length * wB idth;
     cout << "The Area Of the Rectangle Value is: " << rectangleArea << endl;
 }
 

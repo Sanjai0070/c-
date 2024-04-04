@@ -11,7 +11,8 @@ int main() {
     int wordCount = 0;
     int charCount = 0;
 
-    for (char c : text) {
+    for (char c : text) 
+	{
         if (c == ' ' || c == '\n' || c == '\t') {
             wordCount++;
         }

@@ -18,7 +18,5 @@ int main()
 	int num = 4562; 
 	cout << "Reverse of num is " << reverseDigits(num); 
 
-	
-
 	return 0; 
 }

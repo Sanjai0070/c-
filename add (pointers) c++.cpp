@@ -8,7 +8,5 @@ int main() {
 
     std::cout << "Sum of " << num1 << " and " << num2 << " is: " << *result << std::endl;
 
-    
-
     return 0;
 }
