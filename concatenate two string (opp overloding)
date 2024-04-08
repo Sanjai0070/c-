@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+int power(int base, int exponent) {
+    return std::pow(base, exponent);
+}
+
+double power(double base, double exponent) {
+    return std::pow(base, exponent);
+}
+
+int main() {
+    int int_base = 2;
+    int int_exponent = 3;
+
+    double float_base = 2.5;
+    double float_exponent = 2.2;
+
+    std::cout << "Integer power: " << power(int_base, int_exponent) << std::endl;
+    std::cout << "Floating-point power: " << power(float_base, float_exponent) << std::endl;
+
+    return 0;
+}
