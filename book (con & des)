@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class Book {
+private:
+    string title;
+    string author;
+
+public:
+   
+    Book(string t,string a) {
+        title = t;
+        author = a;
+      	cout << "Book created: " << title << " by " << author << endl;
+    }
+
+   
+    ~Book() {
+        cout << "Book destroyed: " << title << " by " << author << endl;
+    }
+
+    
+    string getTitle() {
+        return title;
+    }
+
+    string getAuthor() {
+        return author;
+    }
+};
+
+int main() {
+   
+    Book book1("The Great Gatsby", "F. Scott Fitzgerald");
+    Book book2("To Kill a Mockingbird", "Harper Lee");
+
+   
+   	cout << "Book 1: " << book1.getTitle() << " by " << book1.getAuthor() << std::endl;
+    cout << "Book 2: " << book2.getTitle() << " by " << book2.getAuthor() << std::endl;
+
+   
+    return 0;
+}
