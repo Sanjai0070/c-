@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+public:
+   
+    Student(const string& name, int age) : name_(name), age_(age) {
+        cout << "Student object created: " << name_ << ", " << age_ << endl;
+    }
+
+    
+    ~Student() {
+        cout << "Student object destroyed: " << name_ << ", " << age_ << endl;
+    }
+
+private:
+    string name_;
+    int age_;
+};
+
+int main() {
+    
+    Student student1("sanjai", 20);
+    
+    return 0;
+}
