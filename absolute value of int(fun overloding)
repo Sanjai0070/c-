@@ -1,0 +1,17 @@
+#include <iostream>
+
+int abs(int num) {
+    return (num >= 0) ? num : -num;
+}
+float abs(float num) {
+    return (num >= 0) ? num : -num;
+}
+int main() {
+    int intNum = -5;
+    float floatNum = -3.14;
+
+    std::cout << "Absolute value of " << intNum << " is " << abs(intNum) << std::endl;
+    std::cout << "Absolute value of " << floatNum << " is " << abs(floatNum) << std::endl;
+
+    return 0;
+}
