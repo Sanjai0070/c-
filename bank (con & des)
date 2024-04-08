@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class BankAccount {
+private:
+    string accountName;
+    int accountNumber;
+    double accountBalance;
+
+public:
+    
+    BankAccount(string name, int number, double balance) {
+        accountName = name;
+        accountNumber = number;
+        accountBalance = balance;
+
+        cout << "Account created for " << accountName << " with account number " << accountNumber << endl;
+    }
+
+    
+    ~BankAccount() {
+        cout << "Account for " << accountName << " with account number " << accountNumber << " has been closed." << endl;
+    }
+
+    
+    void displayAccountDetails() {
+        cout << "Account Name: " << accountName << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Account Balance: $" << accountBalance << endl;
+    }
+};
+
+int main() {
+    
+    BankAccount myAccount("suryan", 123456, 1000.00);
+
+    myAccount.displayAccountDetails();
+
+    return 0;
+}
