@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class car{
+  string Name;
+  string Model;
+  int Number;
+  public:
+  	car(string name,string model,int number)
+    {
+      Name=name;
+      Model=model;
+      Number=number;
+    }
+  ~car()
+  {
+    cout<<"The destructer : "<<endl<<"The car "<<Name<<" of model "<<Model<<" has the number "<<Number<<endl;
+  }
+  void display()
+  {
+    cout<<"Name : "<<Name<<endl;
+    cout<<"Model : "<<Model<<endl;
+    cout<<"Number : "<<Number<<endl;
+  }
+};
+int main()
+{
+  car c1("BMW","i8:roadster",123456);
+  c1.display();
+  return 0;
+}
