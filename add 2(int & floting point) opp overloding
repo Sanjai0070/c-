@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+int add(int a, int b) {
+    return a + b;
+}
+
+
+float add(float a, float b) {
+    return a + b;
+}
+
+int main() {
+    int num1 = 5, num2 = 7;
+    float num3 = 3.5, num4 = 4.2;
+
+    
+    cout << "Adding two integer numbers: " << add(num1, num2) << endl;
+
+    
+    cout << "Adding two floating-point numbers: " << add(num3, num4) << endl;
+
+    return 0;
+}
