@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+
+double factorial(double n) {
+    if (n == 0)
+        return 1;
+    else
+        return pow(n, n - 1) * factorial(n - 1);
+}
+
+int main() {
+    int num1 = 5;
+    double num2 = 3.5;
+
+    cout << "Factorial of integer " << num1 << " = " << factorial(num1) << endl;
+    cout << "Factorial of floating-point " << num2 << " = " << factorial(num2) << endl;
+
+    return 0;
+}
