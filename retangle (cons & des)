@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Rectangle {
+public:
+    Rectangle(double width, double height) {
+        cout << "Creating a new rectangle with width: " << width << " and height: " << height << endl;
+        this->width = width;
+        this->height = height;
+    }
+    ~Rectangle() {
+        cout << "Deleting rectangle with width: " << width << " and height: " << height << endl;
+    }
+
+private:
+    double width;
+    double height;
+};
+
+int main() {
+    Rectangle rect(5.0, 10.0);
+    return 0;
+}
