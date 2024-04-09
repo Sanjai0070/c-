@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+public:
+    virtual void work() {
+        cout << "Person is working." << endl;
+    }
+};
+
+class Employee : public Person {
+public:
+    void work() override {
+       cout << "Employee is working on their tasks." << endl;
+    }
+};
+
+class Manager : public Person {
+public:
+    void work() override {
+        cout << "Manager is overseeing their team's work and planning projects." << std::endl;
+    }
+};
+
+int main() {
+    Employee e;
+    Manager m;
+
+    e.work();
+    m.work();
+
+    return 0;
+}
