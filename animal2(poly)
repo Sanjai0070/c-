@@ -1,0 +1,33 @@
+#include <iostream>
+
+
+class Animal {
+public:
+    virtual void move() = 0;
+};
+
+
+class Bird : public Animal {
+public:
+    void move() override {
+        std::cout << "Bird moves by flying" << std::endl;
+    }
+};
+
+ 
+class Fish : public Animal {
+public:
+    void move() override {
+        std::cout << "Fish moves by swimming" << std::endl;
+    }
+};
+
+int main() {
+    Bird bird;
+    Fish fish;
+
+    bird.move();
+    fish.move();
+
+    return 0;
+}
