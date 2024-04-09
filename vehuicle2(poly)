@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+class Vehicle {
+public:
+    virtual void drive() {
+        cout << "Vehicle is being driven." << endl;
+    }
+};
+class Car : public Vehicle {
+public:
+    void drive() override {
+        cout << "Car is being driven." << endl;
+    }
+};
+
+
+class Truck : public Vehicle {
+public:
+    void drive() override {
+        cout << "Truck is being driven." << endl;
+    }
+};
+
+int main() {
+    Vehicle* vehicle1 = new Vehicle();
+    Vehicle* car1 = new Car();
+    Vehicle* truck1 = new Truck();
+
+    vehicle1->drive();
+    car1->drive();     
+    truck1->drive();   
+    
+
+    return 0;
+}
