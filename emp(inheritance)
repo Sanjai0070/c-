@@ -1,0 +1,89 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+class Employee {
+protected:
+    string name;
+    int id;
+    double salary;
+
+public:
+   
+    Employee(string n, int i, double s) : name(n), id(i), salary(s) {}
+
+    
+    string getName() { return name; }
+    int getId() { return id; }
+    double getSalary() { return salary; }
+
+   
+    void setName(string n) { name = n; }
+    void setId(int i) { id = i; }
+    void setSalary(double s) { salary = s; }
+};
+
+
+class Manager : public Employee {
+private:
+    string department;
+    double bonus;
+
+public:
+    
+    Manager(string n, int i, double s, string d, double b) : Employee(n, i, s), department(d), bonus(b) {}
+
+    
+    string getDepartment() { return department; }
+    double getBonus() { return bonus; }
+
+    // Setters
+    void setDepartment(string d) { department = d; }
+    void setBonus(double b) { bonus = b; }
+};
+
+
+class Engineer : public Employee {
+private:
+    string specialty;
+    int hours;
+
+public:
+    
+    Engineer(string n, int i, double s, string sp, int h) : Employee(n, i, s), specialty(sp), hours(h) {}
+
+   
+    string getSpecialty() { return specialty; }
+    int getHours() { return hours; }
+
+    
+    void setSpecialty(string sp) { specialty = sp; }
+    void setHours(int h) { hours = h; }
+};
+
+int main() {
+    
+    Manager manager("arun", 1001, 60000, "Marketing", 5000);
+
+    
+    Engineer engineer("will Smith", 2001, 70000, "Software Development", 40);
+
+    
+    cout << "Manager Information:" << endl;
+    cout << "Name: " << manager.getName() << endl;
+    cout << "ID: " << manager.getId() << endl;
+    cout << "Salary: $" << manager.getSalary() << endl;
+    cout << "Department: " << manager.getDepartment() << endl;
+    cout << "Bonus: $" << manager.getBonus() << endl;
+
+    cout << "\nEngineer Information:" << endl;
+    cout << "Name: " << engineer.getName() << endl;
+    cout << "ID: " << engineer.getId() << endl;
+    cout << "Salary: $" << engineer.getSalary() << endl;
+    cout << "Specialty: " << engineer.getSpecialty() << endl;
+    cout << "Hours: " << engineer.getHours() << " hours" << endl;
+
+    return 0;
+}
