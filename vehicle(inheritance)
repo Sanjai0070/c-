@@ -1,0 +1,96 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    string make;
+    string model;
+    int year;
+
+    void setMake(string m) {
+        make = m;
+    }
+    string getMake() {
+        return make;
+    }
+    void setModel(string m) {
+        model = m;
+    }
+    string getModel() {
+        return model;
+    }
+    void setYear(int y) {
+        year = y;
+    }
+    int getYear() {
+        return year;
+    }
+};
+
+class Car: public Vehicle {
+public:
+    int seatingCapacity;
+    string fuelType;
+
+    void setSeatingCapacity(int s) {
+        seatingCapacity = s;
+    }
+    int getSeatingCapacity() {
+        return seatingCapacity;
+    }
+    void setFuelType(string f) {
+        fuelType = f;
+    }
+    string getFuelType() {
+        return fuelType;
+    }
+};
+
+class Truck: public Vehicle {
+public:
+    int payloadCapacity;
+    int towingCapacity;
+
+    void setPayloadCapacity(int p) {
+        payloadCapacity = p;
+    }
+    int getPayloadCapacity() {
+        return payloadCapacity;
+    }
+    void setTowingCapacity(int t) {
+        towingCapacity = t;
+    }
+    int getTowingCapacity() {
+        return towingCapacity;
+    }
+};
+
+int main() {
+    Car car;
+    car.setMake("Toyota");
+    car.setModel("Camry");
+    car.setYear(2022);
+    car.setSeatingCapacity(5);
+    car.setFuelType("Gasoline");
+
+    cout << "Car Make: " << car.getMake() << endl;
+    cout << "Car Model: " << car.getModel() << endl;
+    cout << "Car Year: " << car.getYear() << endl;
+    cout << "Car Seating Capacity: " << car.getSeatingCapacity() << endl;
+    cout << "Car Fuel Type: " << car.getFuelType() << endl;
+
+    Truck truck;
+    truck.setMake("Ford");
+    truck.setModel("F-150");
+    truck.setYear(2023);
+    truck.setPayloadCapacity(3000);
+    truck.setTowingCapacity(7000);
+
+    cout << "Truck Make: " << truck.getMake() << endl;
+    cout << "Truck Model: " << truck.getModel() << endl;
+    cout << "Truck Year: " << truck.getYear() << endl;
+    cout << "Truck Payload Capacity: " << truck.getPayloadCapacity() << endl;
+    cout << "Truck Towing Capacity: " << truck.getTowingCapacity() << endl;
+
+    return 0;
+}
